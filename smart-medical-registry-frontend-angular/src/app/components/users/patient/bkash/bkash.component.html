@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <mat-card>
+        <div class="row text-center">
+
+
+            <div class="col-md-4">
+                <br>
+                <img class="responsive" src="../../../assets/bkash.png" alt="Registration Here">
+            </div>
+
+            <div class="col-md-8">
+                <br><br>
+                <h1>BKash Account Details</h1>
+                <form (ngSubmit)="userDataSubmit()">
+
+
+                    <div class="row">
+                        <div class="col-md-5 offset-md-1">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Mobile No.</mat-label>
+                                <input type="text" matInput placeholder="Ex. 01681650106" [(ngModel)]="data.mobile"
+                                    name="mobile">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-md-5">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Pin</mat-label>
+                                <input type="password" matInput placeholder="Enter Here . . ." [(ngModel)]="data.pin"
+                                    name="pin">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+
+                    <mat-list>
+                        <br>
+                        <div class="col-md-10 offset-md-1">
+                            <mat-divider></mat-divider>
+                        </div>
+                        <br>
+                        <button *ngIf="bkashMapId==0" type="submit" mat-raised-button color="primary">Add Bkash</button>
+                        <button *ngIf="bkashMapId!=0" type="submit" mat-raised-button color="primary">Update Bkash</button>
+                    </mat-list>
+
+                </form>
+            </div>
+
+
+        </div>
+    </mat-card>
+</div>

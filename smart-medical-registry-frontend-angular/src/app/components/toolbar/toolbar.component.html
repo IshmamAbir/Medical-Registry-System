@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+
+    <button mat-icon-button class="material-icons-round">
+        <mat-icon>healing</mat-icon>
+    </button>
+    <span>Diagnostic Center</span>
+    <button mat-icon-button class="material-icons-outlined">
+        <mat-icon>local_hospital</mat-icon>
+    </button>
+
+
+    <span class="example-spacer"></span>
+    <button *ngIf="!isLogin" mat-icon-button class="example-icon favorite-icon" matTooltip="Welcome Page"
+        [matTooltipPosition]="position.value" routerLink="">
+        <mat-icon>home</mat-icon>
+    </button>
+
+    <button *ngIf="!isLogin" mat-icon-button class="example-icon favorite-icon" matTooltip="Login"
+        [matTooltipPosition]="position.value" routerLink="/login">
+        <mat-icon>login</mat-icon>
+    </button>
+
+    <button *ngIf="isLogin && user" [routerLink]="customLink(user)" mat-button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon">account_box</mat-icon>
+        {{user.username}}
+    </button>
+
+    <button *ngIf="isLogin" mat-icon-button class="example-icon favorite-icon" matTooltip="Logout"
+        [matTooltipPosition]="position.value" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+    </button>
+
+</mat-toolbar>

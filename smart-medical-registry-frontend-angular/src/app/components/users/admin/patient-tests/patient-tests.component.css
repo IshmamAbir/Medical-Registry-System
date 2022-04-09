@@ -1,0 +1,15 @@
+.example-header-image {
+    background-image: url('src\assets\test.png');
+    background-size: cover;
+  }
+  .responsive {
+    max-width: 20%;
+    height: auto;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }

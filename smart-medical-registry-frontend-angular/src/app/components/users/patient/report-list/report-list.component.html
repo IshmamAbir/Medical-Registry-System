@@ -1,0 +1,49 @@
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>All Reports</mat-card-title>
+            <mat-card-subtitle>List</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img class="responsive" src="../../../assets/report2.png" alt="">
+                </div>
+                <div class="col-md-6">
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Report Name</th>
+                                <th scope="col">Show</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let report of reportList; index as i">
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>{{ report.description }}</td>
+                                <td>
+                                    <button mat-icon-button color="primary"
+                                        (click)="showImage(report.imageId,report.type,report.description)">
+                                        <mat-icon>description</mat-icon>
+                                    </button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions class="text-center">
+            <br> <button mat-raised-button  [routerLink]="['/patient/add-report']" routerLinkActive="router-link-active" >Add</button><br><br>
+        </mat-card-actions>
+    </mat-card>
+</div>

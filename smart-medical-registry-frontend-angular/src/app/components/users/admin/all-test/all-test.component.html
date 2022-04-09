@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <div class="col text-center">
+        <br>
+        <button mat-fab color="accent" routerLink="/admin/add-test" matTooltip="Add New Test Details"
+            aria-label="Example icon button with a bookmark icon">
+            <mat-icon>add</mat-icon>
+        </button>
+
+    </div>
+    <br>
+    <mat-card>
+
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>All Test Details</mat-card-title>
+            <mat-card-subtitle>Info</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+
+             <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Test Name</th>
+                        <th scope="col">Test Day</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Cost</th>
+                        <th scope="col">Prerequisite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let test of testList; index as i">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>{{ test.testName }}</td>
+                        <td>{{ test.testDay }}</td>
+                        <td>{{ test.time }}</td>
+                        <td>{{ test.cost }}</td>
+                        <td>{{ test.prerequisite }}</td>
+                    </tr>
+                </tbody>
+            </table> 
+
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions>
+<br><br>
+        </mat-card-actions>
+
+    </mat-card>
+
+</div>

@@ -1,0 +1,9 @@
+.example-header-image {
+    background-image: url('src\assets\prescription.png');
+    background-size: cover;
+  }
+
+  .example-header-image2 {
+    background-image: url('src\assets\report.png');
+    background-size: cover;
+  }

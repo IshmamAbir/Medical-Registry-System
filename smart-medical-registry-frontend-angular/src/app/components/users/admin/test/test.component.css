@@ -1,0 +1,22 @@
+.example-header-image {
+    background-image: url("src\assets\patient-test.png");
+    background-size: cover;
+  }
+  
+  .example-header-image2 {
+    background-image: url("src\assets\test-report.png");
+    background-size: cover;
+  }
+  
+  .example-header-image3 {
+    background-image: url("src\assets\payment.png");
+    background-size: cover;
+  }
+  
+  .example-header-image4 {
+    background-image: url("src\assets\idea.png");
+    background-size: cover;
+  }
+  
+
+  

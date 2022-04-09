@@ -1,0 +1,46 @@
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>All Diabetes Readings</mat-card-title>
+            <mat-card-subtitle>List</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img class="responsive" src="../../../assets/diabetic2.png" alt="">
+                </div>
+                <div class="col-md-6">
+
+            
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Reading</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let diabetic of diabeticList; index as i">
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>{{ diabetic.reading }}</td>
+                                <td>{{ diabetic.date }}</td>
+                                <td>{{ diabetic.time }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions class="text-center">
+            <br> <button mat-raised-button  [routerLink]="['/patient/add-diabetic']" routerLinkActive="router-link-active" >Add</button><br><br>
+        </mat-card-actions>
+    </mat-card>
+</div>

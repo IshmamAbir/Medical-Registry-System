@@ -1,0 +1,88 @@
+<div class="container-fluid">
+
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Add New Test Information</mat-card-title>
+            <mat-card-subtitle>Please Provide Info</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <form (ngSubmit)="testDataSubmit()">
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Test Name</mat-label>
+                            <input type="text" matInput
+                                placeholder="Ex. Blood Test / kidney function test / pregnancy test"
+                                [(ngModel)]="data.testName" name="testName">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-5">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Test Cost</mat-label>
+                            <input type="number" matInput min=1 [(ngModel)]="data.cost" name="cost">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Test Day</mat-label>
+                            <mat-select multiple [(ngModel)]="data.day" name="day">
+                                <mat-option *ngFor="let day of dayList" [value]="day">{{day}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-5">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Test Time</mat-label>
+                            <input type="text" matInput [(ngModel)]="data.time" name="time">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Test Prerequisite</mat-label>
+                            <input type="text" matInput  [(ngModel)]="data.prerequisite" name="prerequisite">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-10 offset-md-1">
+
+                        <mat-list>
+                            <button type="reset" mat-stroked-button color="accent">Clear Full Form</button>
+                            <br><br>
+
+                            <mat-divider></mat-divider>
+
+                            <br>
+                            <button type="submit" mat-raised-button color="primary">Add Test Information</button>
+                        </mat-list>
+
+
+                    </div>
+
+                </div>
+
+
+            </form>
+
+
+        </mat-card-content>
+
+
+        <mat-card-actions>
+            <br>
+        </mat-card-actions>
+    </mat-card>
+</div>
+

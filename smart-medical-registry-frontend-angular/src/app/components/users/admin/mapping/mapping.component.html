@@ -1,0 +1,111 @@
+<div class="container-fluid">
+
+    <mat-card>
+
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Map Doctor & Compounder</mat-card-title>
+            <mat-card-subtitle>Mapping</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row">
+
+                <!-- Doctor Side -->
+                <div class="col-md-6">
+
+                    <form (ngSubmit)="doctorUsernameSubmit()">
+                        <div class="row">
+
+                            <div class="col-md-10">
+
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Doctor's Username</mat-label>
+                                    <input matInput placeholder="Enter Your Doctor Username"
+                                        [(ngModel)]="user.docUsername" name="docUsername">
+                                </mat-form-field>
+
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" mat-button>
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+
+                <!-- Compounder Side -->
+                <div class="col-md-6">
+                    <form (ngSubmit)="compounderUsernameSubmit()">
+                        <div class="row">
+
+                            <div class="col-md-10">
+
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Compounder's Username</mat-label>
+                                    <input matInput placeholder="Enter Your Compounder Username"
+                                        [(ngModel)]="user.comUsername" name="comUsername">
+                                </mat-form-field>
+
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" mat-button>
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <mat-divider></mat-divider><br>
+
+            <div class="row">
+                <!-- Doctor Details -->
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Doctor Name</mat-label>
+                        <input readonly matInput [(ngModel)]="doctorDetails.name">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Mobile</mat-label>
+                        <input readonly matInput [(ngModel)]="doctorDetails.mobile" name="mobile">
+                    </mat-form-field>
+
+                </div>
+
+                <!-- Compounder Details -->
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Compounder Name</mat-label>
+                        <input readonly matInput [(ngModel)]="compounderDetails.name" name="name">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Mobile</mat-label>
+                        <input readonly matInput [(ngModel)]="compounderDetails.mobile" name="mobile">
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+        </mat-card-content>
+        <mat-divider></mat-divider><br>
+
+        <mat-card-actions>
+            <div class="col text-center"> 
+                <button mat-raised-button (click)="mapping()">Map Doctor & Compounder</button>
+            </div><br>
+        </mat-card-actions>
+
+    </mat-card>
+
+</div>

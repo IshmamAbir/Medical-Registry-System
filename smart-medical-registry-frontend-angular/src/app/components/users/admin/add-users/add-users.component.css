@@ -1,0 +1,11 @@
+.responsive {
+    max-width: 20%;
+    height: auto;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-top: 30px;
+    margin-left: 75px;
+  }

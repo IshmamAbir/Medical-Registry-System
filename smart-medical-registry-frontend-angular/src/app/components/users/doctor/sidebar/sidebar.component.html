@@ -1,0 +1,25 @@
+<mat-card>
+
+    <mat-action-list>
+
+        <div mat-subheader>Menu</div>
+
+        <button mat-list-item routerLink="/doctor">
+            <mat-icon mat-list-icon>home</mat-icon> Home
+        </button>
+
+        <button mat-list-item routerLink="/doctor/serials">
+            <mat-icon mat-list-icon>format_list_numbered</mat-icon> Patient Serial
+        </button>
+
+        <button mat-list-item routerLink="/doctor/search-patient">
+            <mat-icon mat-list-icon>search</mat-icon> Search
+        </button>
+
+        <button mat-list-item (click)="logout()">
+            <mat-icon mat-list-icon>logout</mat-icon> Logout
+        </button>
+
+    </mat-action-list>
+
+</mat-card><br>

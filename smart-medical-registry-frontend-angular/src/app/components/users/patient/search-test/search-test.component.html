@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row text-center">
+
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <br>
+            <mat-form-field class="example-full-width">
+                <mat-label>Select a Test</mat-label>
+                <mat-select [(ngModel)]="selectedTest" name="selectedTest" (ngModelChange)="getTestInfo()">
+                    <mat-option *ngFor="let test of testList" [value]="test.testId">{{test.testName}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row" *ngIf=" selectedTest != 0">
+        <div class="col-md-12">
+            <mat-card>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="responsive" src="../../../assets/report2.png" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <mat-list>
+                            <mat-list-item>Test Day:</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>Test Time</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>Test Cost</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>Test Prerequisite</mat-list-item>
+                            <mat-divider></mat-divider>
+                        </mat-list>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-list>
+                            <mat-list-item>{{test.testDay}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>{{test.time}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>{{test.cost}} TK.</mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item>{{test.prerequisite}}</mat-list-item>
+                            <mat-divider></mat-divider>
+                        </mat-list>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+
+    <div class="row text-center">
+        <div class="col-md-12">
+            <mat-card>
+                <h2>Test Due Payment</h2>
+            </mat-card><br>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-12">
+            <mat-card>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Patient</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Total Cost</th>
+                            <th scope="col">Total Paid</th>
+                            <th scope="col">Total Payable</th>
+                            <th scope="col">Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let patientTest of patientTestList; index as i">
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ patientTest.patientName }}</td>
+                            <td>{{ patientTest.email }}</td>
+                            <td>{{ patientTest.totalCost }}</td>
+                            <td>{{ patientTest.pay }}</td>
+                            <th>{{ patientTest.totalCost - patientTest.pay}}</th>
+                            <td><button *ngIf="bkashMapId!=0" mat-raised-button color="primary"
+                                    (click)="duePayment(patientTest.patientTestId,patientTest.totalCost-patientTest.pay)">Pay Due</button></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </mat-card>
+        </div>
+    </div>
+
+</div>

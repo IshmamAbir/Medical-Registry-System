@@ -1,0 +1,209 @@
+<div class="container-fluid">
+
+    <div class="col text-center">
+        <mat-card>
+            <h1>Medical Documents</h1>
+        </mat-card>
+    </div>
+    <br>
+
+
+    <div class="row text-center">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Prescription</mat-card-title>
+
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-3">
+                            <button mat-fab color="accent" matTooltip="Show All Prescription"
+                                [routerLink]="['/patient/prescription-list']" routerLinkActive="router-link-active">
+                                <mat-icon>folder</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                        <div class="col-md-3">
+                            <button mat-fab color="accent" matTooltip="Add New Prescription"
+                                [routerLink]="['/patient/add-prescription']" routerLinkActive="router-link-active">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image2"></div>
+                    <mat-card-title>Report</mat-card-title>
+
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-3">
+                            <button mat-fab color="accent" matTooltip="Show All Reports"
+                                [routerLink]="['/patient/report-list']" routerLinkActive="router-link-active">
+                                <mat-icon>folder</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                        <div class="col-md-3">
+                            <button mat-fab color="accent" matTooltip="Add New Report"
+                                [routerLink]="['/patient/add-report']" routerLinkActive="router-link-active">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+
+
+
+    <!-- Second Portion -->
+
+
+
+
+    <div class="row text-center">
+        <!-- Diabetic -->
+        <div class="col-md-4">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image3"></div>
+                    <mat-card-title>Diabetes</mat-card-title>
+
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-3">
+                            <button mat-fab color="accent" matTooltip="Show All Diabetic Reading"
+                                [routerLink]="['/patient/diabetic-list']" routerLinkActive="router-link-active">
+                                <mat-icon>format_list_bulleted</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                        <div class="col-md-3">
+                            <button mat-fab color="accent" matTooltip="Add New Diabetic Reading"
+                                [routerLink]="['/patient/add-diabetic']" routerLinkActive="router-link-active">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card><br>
+        </div>
+
+        <!-- Blood Pressure -->
+        <div class="col-md-4">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image4"></div>
+                    <mat-card-title>Blood Pressure</mat-card-title>
+
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-3">
+                            <button mat-fab color="accent" matTooltip="Show All Blood Pressure Reading"
+                                [routerLink]="['/patient/blood-pressure-list']" routerLinkActive="router-link-active">
+                                <mat-icon>format_list_bulleted</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                        <div class="col-md-3">
+                            <button mat-fab color="accent" matTooltip="Add New Blood Pressure Reading"
+                                [routerLink]="['/patient/add-blood-pressure']" routerLinkActive="router-link-active">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card><br>
+        </div>
+
+        <!-- Nothing Yet -->
+        <div class="col-md-4">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image5"></div>
+                    <mat-card-title>Future Work</mat-card-title>
+
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-3">
+                            <button disabled mat-fab color="accent" matTooltip="New Idea"
+                                [routerLink]="['/patient/prescription-list']" routerLinkActive="router-link-active">
+                                <mat-icon>format_list_bulleted</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                        <div class="col-md-3">
+                            <button disabled mat-fab color="accent" matTooltip="New Idea"
+                                [routerLink]="['/patient/add-prescription']" routerLinkActive="router-link-active">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        </div>
+                        <div class="col-md-2"><br></div>
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card><br>
+        </div>
+
+    </div>
+
+    
+
+</div>

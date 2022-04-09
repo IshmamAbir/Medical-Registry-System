@@ -1,0 +1,84 @@
+<div class="container-fluid">
+    <div class="row text-center">
+
+        <mat-card>
+            <div class="col-md-6 offset-md-3">
+                <img class="responsive" src="../../../assets/serial.png" alt="Serial Here">
+                <h1>Add New Serial</h1>
+            </div>
+            <form (ngSubmit)="serialDataSubmit()">
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Patient Name</mat-label>
+                            <input type="text" matInput placeholder="Ex. Mohammad" [(ngModel)]="data.patientName"
+                                name="patientName">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-5">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Age</mat-label>
+                            <input type="number" min="0" matInput placeholder="Ex. 30" [(ngModel)]="data.age"
+                                name="age">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Mobile No.</mat-label>
+                            <input type="text" matInput placeholder="Ex. 018501333" [(ngModel)]="data.mobile"
+                                name="mobile">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-5">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>ID</mat-label>
+                            <input type="text" matInput placeholder="Enter Here . . ." [(ngModel)]="data.id"
+                                name="id">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="datepicker" [min]="minDate" [(ngModel)]="ProcessDate" name="ProcessDate"
+                                readonly>
+                            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                            <mat-datepicker touchUi #datepicker></mat-datepicker>
+                        </mat-form-field>
+
+                    </div>
+                    <div class="col-md-5">
+                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                            [(ngModel)]="data.gender" name="gender">
+                            <mat-radio-button class="example-radio-button" *ngFor="let gender of genderlist" [value]="gender">
+                                {{gender}}
+                            </mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+
+                </div>
+
+                <mat-list>
+                    <button type="reset" mat-stroked-button color="accent">Clear Full Form</button>
+                    <br><br>
+                    <div class="col-md-10 offset-md-1">
+                        <mat-divider></mat-divider>
+                    </div>
+                    <br>
+                    <button type="submit" mat-raised-button color="primary">Serial Register</button>
+                </mat-list>
+
+            </form>
+
+        </mat-card>
+     
+
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+    <div class="col text-center">
+        <mat-card>
+            <h1>Save Patient's Documents</h1>
+        </mat-card>
+    </div>
+    <br>
+
+    <div class="row text-center">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Prescription</mat-card-title>
+
+                </mat-card-header>
+                <mat-card-content>
+                    <button mat-fab color="accent" [routerLink]="['/compounder/com-prescription']" routerLinkActive="router-link-active" >
+                        <mat-icon>upload_file</mat-icon>
+                    </button>
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+        <br>
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image2"></div>
+                    <mat-card-title>Report</mat-card-title>
+
+                </mat-card-header>
+                <mat-card-content>
+                    <button mat-fab color="accent" [routerLink]="['/compounder/com-report']" routerLinkActive="router-link-active" >
+                        <mat-icon>upload_file</mat-icon>
+                    </button>
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+</div>

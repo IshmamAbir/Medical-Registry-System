@@ -1,0 +1,32 @@
+<div class="container">
+    <div class=" text-center">
+
+        <mat-card>
+            <div class="col-md-6 offset-md-3">
+                <img class="responsive" src="../../../assets/login.png" alt="Registration Here"><br><br>
+                <h1>Login</h1>
+
+                <form (ngSubmit)="userDataSubmit()">
+
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput placeholder="Ex: ishmam.abir" [(ngModel)]="data.username"
+                            name="username">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput placeholder="Enter Here . . ." [(ngModel)]="data.password"
+                            name="password">
+                    </mat-form-field>
+
+                    <button type="submit" mat-raised-button color="primary">Login</button>
+                    <br><br>
+                </form>
+
+            </div>
+        </mat-card>
+
+    </div>
+</div>

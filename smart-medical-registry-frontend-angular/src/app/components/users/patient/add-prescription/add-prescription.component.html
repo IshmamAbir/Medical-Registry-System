@@ -1,0 +1,67 @@
+<div class="container-fluid">
+
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Prescription</mat-card-title>
+            <mat-card-subtitle>Provide Information</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+
+            <form (ngSubmit)="userDataSubmit()">
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Patient ID</mat-label>
+                            <input type="text" matInput readonly [(ngModel)]="prescription.patientId"
+                                name="patientId">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-5">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Prescribed By</mat-label>
+                            <input type="text" matInput placeholder="Ex. Dr. Kamrul Hasan" [(ngModel)]="prescription.description"
+                                name="description">
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <br> <input type="file" accept="image/*" (change)="onFileChanged($event)">
+                    </div>
+
+                    <div class="col-md-5"></div>
+
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <mat-list>
+                            <button type="reset" mat-stroked-button color="accent">Clear Full Form</button>
+                            <br><br>
+                            <div class="col-md-10 offset-md-1">
+                                <mat-divider></mat-divider>
+                            </div>
+                            <br>
+                            <button type="submit" mat-raised-button color="primary">Save</button>
+                        </mat-list>
+                    </div>
+
+                </div>
+            </form>
+
+
+
+
+        </mat-card-content>
+
+        <mat-card-actions>
+           <br>
+        </mat-card-actions>
+    </mat-card>
+
+
+</div>

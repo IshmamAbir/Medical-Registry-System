@@ -1,0 +1,32 @@
+<div class="container">
+    <mat-card>
+        <div class="row">
+            <div class="col-md-4">
+                <br><br> <img class="responsive" src="../../../assets/test-report-list.png" alt="Registration Here">
+            </div>
+            <div class="col-md-8">
+                <h1>Upload Report For ID - {{patientId}}</h1><br>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Test Name</th>
+                            <th scope="col">Upload</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let test of testList; index as i">
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ test.testName }}</td>
+                            <td> <button mat-icon-button color="primary" (click)="newTab(test.testName)" routerLinkActive="router-link-active" 
+                                    aria-label="Example icon button with a home icon">
+                                    <mat-icon>upload</mat-icon>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </mat-card>
+</div>

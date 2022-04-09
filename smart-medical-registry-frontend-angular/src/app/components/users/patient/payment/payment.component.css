@@ -1,0 +1,9 @@
+.example-header-image {
+    background-image: url("src\assets\payment.png");
+    background-size: cover;
+  }
+  
+  .example-header-image2 {
+    background-image: url("src\assets\bkash2.png");
+    background-size: cover;
+  }

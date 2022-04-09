@@ -1,0 +1,153 @@
+
+<div class="container-fluid">
+
+    <div class="col text-center">
+        <mat-card>
+            <h1>Patient Medical Test & Reports</h1>
+        </mat-card>
+    </div>
+    <br>
+
+
+    <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Patient Medical Test</mat-card-title>
+                    <mat-card-subtitle>New Test</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+
+                    <div class="row text-center">
+                        
+                        <div class="col-md-12">
+                            <button mat-fab color="accent" matTooltip="Add Patient's New Test Details"
+                                [routerLink]="['/admin/patient-test']" routerLinkActive="router-link-active">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        </div>
+                        
+                       
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image2"></div>
+                    <mat-card-title>Medical Test Report</mat-card-title>
+                    <mat-card-subtitle>Send To Patient</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+
+                    <div class="row text-center">
+                        
+                        <div class="col-md-12">
+                            <button mat-fab color="accent" matTooltip="Send Test Report To Patient"
+                                [routerLink]="['/admin/patient-test-upload']" routerLinkActive="router-link-active">
+                                <mat-icon>publish</mat-icon>
+                            </button>
+                        </div>
+                        
+                       
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+
+
+    <!-- Second Portion -->
+
+
+
+   
+    <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image3"></div>
+                    <mat-card-title>Patient Test Due</mat-card-title>
+                    <mat-card-subtitle>Due Payment</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+
+                    <div class="row text-center">
+                        
+                        <div class="col-md-12">
+                            <button mat-fab color="accent" matTooltip="Patient's Test Due Payment"
+                                [routerLink]="['/admin/patient-test-due']" routerLinkActive="router-link-active">
+                                <mat-icon>attach_money</mat-icon>
+                            </button>
+                        </div>
+                        
+                       
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image4"></div>
+                    <mat-card-title>Future Work</mat-card-title>
+                    <mat-card-subtitle>New Idea</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+
+                    <div class="row text-center">
+                        
+                        <div class="col-md-12">
+                            <button disabled mat-fab color="accent" matTooltip="Send Test Report To Patient"
+                                [routerLink]="['/admin/patient-test-upload']" routerLinkActive="router-link-active">
+                                <mat-icon>emoji_objects</mat-icon>
+                            </button>
+                        </div>
+                        
+                       
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+    
+
+</div>

@@ -1,0 +1,29 @@
+<mat-card>
+
+    <mat-action-list>
+
+        <div mat-subheader>Menu</div>
+
+        <button mat-list-item routerLink="/patient">
+            <mat-icon mat-list-icon>home</mat-icon> Home
+        </button>
+
+        <button mat-list-item routerLink="/patient/documents-save">
+            <mat-icon mat-list-icon>folder_open</mat-icon> Medical Records
+        </button>
+
+        <button mat-list-item routerLink="/patient/payment">
+            <mat-icon mat-list-icon>payment</mat-icon> Payment
+        </button>
+
+        <button mat-list-item routerLink="/patient/search-test">
+            <mat-icon mat-list-icon>search</mat-icon> Search Test
+        </button>
+
+        <button mat-list-item (click)="logout()">
+            <mat-icon mat-list-icon>logout</mat-icon> Logout
+        </button>
+
+    </mat-action-list>
+
+</mat-card><br>

@@ -1,0 +1,81 @@
+<div class="container">
+    
+    <div class="row text-center">
+        <div class="col-md-12">
+            <mat-card>
+                <h2>Payment</h2>
+            </mat-card><br>
+        </div>
+    </div>
+
+
+   
+    <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Medical Test Due</mat-card-title>
+                    <mat-card-subtitle>Due Payment</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+
+                    <div class="row text-center">
+                        
+                        <div class="col-md-12">
+                            <button mat-fab color="accent" matTooltip="Patient's Test Due Payment"
+                                [routerLink]="['/patient/test-due-payment']" routerLinkActive="router-link-active">
+                                <mat-icon>attach_money</mat-icon>
+                            </button>
+                        </div>
+                        
+                       
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image2"></div>
+                    <mat-card-title>Add Bkash Account</mat-card-title>
+                    <mat-card-subtitle>For payment</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+
+                    <div class="row text-center">
+                        
+                        <div class="col-md-12">
+                            <button mat-fab color="accent" matTooltip="Add Bkash"
+                                [routerLink]="['/patient/bkash']" routerLinkActive="router-link-active">
+                                <mat-icon>add</mat-icon>
+                            </button>
+                        </div>
+                        
+                       
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,84 @@
+<div class="container">
+    <mat-card>
+        <div class="row text-center">
+
+
+            <div class="col-md-6 offset-md-3">
+                <img class="responsive" src="../../../assets/registration logo.png" alt="Registration Here">
+                <h1>Registration</h1>
+            </div>
+        </div>
+        <form (ngSubmit)="userDataSubmit()">
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>First Name</mat-label>
+                        <input type="text" matInput placeholder="Ex: Ishmam" [(ngModel)]="data.firstName"
+                            name="firstName">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-5">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Last Name</mat-label>
+                        <input type="text" matInput placeholder="Ex: Abir" [(ngModel)]="data.lastName"
+                            name="lastName">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput placeholder="Ex. ishmam.abir" [(ngModel)]="data.username"
+                            name="username">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-5">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput placeholder="Enter Here . . ." [(ngModel)]="data.password"
+                            name="password">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Mobile No.</mat-label>
+                        <input type="text" matInput placeholder="Ex. 01681650106" [(ngModel)]="data.mobile"
+                            name="mobile">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-5">
+                    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                        [(ngModel)]="data.userType" name="userType">
+                        <mat-radio-button class="example-radio-button" *ngFor="let user of users" [value]="user">
+                            {{user}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <mat-list>
+                        <button type="reset" mat-stroked-button color="accent">Clear Full Registration Form</button>
+                        <br><br>
+                        <div class="col-md-10 offset-md-1">
+                            <mat-divider></mat-divider>
+                        </div>
+                        <br>
+                        <button type="submit" mat-raised-button color="primary">Register</button>
+                    </mat-list>
+                </div>
+            </div>
+        </form>
+
+
+
+    </mat-card>
+</div>

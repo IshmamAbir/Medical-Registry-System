@@ -1,0 +1,65 @@
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Add New BP Reading</mat-card-title>
+            <mat-card-subtitle>Please Provide Information</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img class="responsive" src="../../../assets/blood-pressure2.png" alt="">
+                </div>
+                <div class="col-md-6">
+
+                    <form (ngSubmit)="userDataSubmit()">
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>SBP</mat-label>
+                            <input type="number" min="90" max="220" matInput placeholder="Ex. 90"
+                                [(ngModel)]="sbp" name="sbp">
+                            <mat-hint><strong>Range 90 To 220</strong> </mat-hint>
+                        </mat-form-field>
+                        <br><br>
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>DBP</mat-label>
+                            <input type="number" min="30" max="110" matInput placeholder="Ex. 30"
+                                [(ngModel)]="dbp" name="dbp">
+                                <mat-hint><strong>Range 30 To 110</strong> </mat-hint>
+                        </mat-form-field>
+                        <br><br>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Choose Date</mat-label>
+                            <input matInput [matDatepicker]="datepicker" [max]="minDate" [(ngModel)]="processDate" name="processDate"
+                                readonly>
+                            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                            <mat-datepicker touchUi #datepicker></mat-datepicker>
+                        </mat-form-field>
+                        <br><br>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Choose Time</mat-label>
+                            <input matInput [ngxTimepicker]="timepicker1" [(ngModel)]="data.time"
+                                name="time" readonly>
+                            <ngx-material-timepicker-toggle matSuffix [for]="timepicker1">
+                            </ngx-material-timepicker-toggle>
+                            <ngx-material-timepicker #timepicker1></ngx-material-timepicker>
+                        </mat-form-field>
+
+
+                        <button type="submit" mat-raised-button color="primary">Save</button>
+                        <br><br>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <br>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,174 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col text-center">
+            <mat-card>
+                <h1>Patient's Documents</h1>
+            </mat-card><br>
+        </div>
+    </div>
+
+
+    <div class="row text-center">
+
+        <div class="col-md-6">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Prescription</mat-card-title>
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Prescribed By</th>
+                                <th scope="col">Show</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let prescription of prescriptionList; index as i">
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>{{ prescription.description }}</td>
+                                <td>
+                                    <button mat-icon-button color="primary" (click)="showImage(prescription.imageId,prescription.type,prescription.description)">
+                                        <mat-icon>description</mat-icon>
+                                    </button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-6">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image2"></div>
+                    <mat-card-title>Report</mat-card-title>
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Report Name</th>
+                                <th scope="col">Show</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let report of reportList; index as i">
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>{{ report.description }}</td>
+                                <td>
+                                    <button mat-icon-button color="primary" (click)="showImage(report.imageId,report.type,report.description)">
+                                        <mat-icon>description</mat-icon>
+                                    </button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+
+
+    </div>
+
+    <!-- Medical Records -->
+
+    <div class="row text-center">
+
+        <div class="col-md-6">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image3"></div>
+                    <mat-card-title>All Diabetes Readings</mat-card-title>
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Reading</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let diabetic of diabeticList; index as i">
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>{{ diabetic.reading }}</td>
+                                <td>{{ diabetic.date }}</td>
+                                <td>{{ diabetic.time }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+            <br>
+        </div>
+
+        <div class="col-md-6">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image4"></div>
+                    <mat-card-title>All BP Readings</mat-card-title>
+                    
+                </mat-card-header>
+                <br>
+                <mat-card-content>
+                 
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Reading</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let bp of bpList; index as i">
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>{{ bp.reading }}</td>
+                                <td>{{ bp.date }}</td>
+                                <td>{{ bp.time }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <br>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+
+
+    </div>
+
+
+</div>

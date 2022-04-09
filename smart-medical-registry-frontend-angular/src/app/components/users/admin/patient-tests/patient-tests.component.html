@@ -1,0 +1,115 @@
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <mat-card>
+                <H2> Medical Test</H2>
+            </mat-card>
+        </div>
+    </div>
+    <br>
+    <mat-card><h2>Patient Details</h2>
+    <form (ngSubmit)="userDataSubmit()">
+
+        <div class="row text-center">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Patient Name</mat-label>
+                    <input type="text" matInput placeholder="Ex. Mohammad" [(ngModel)]="data.patientName"
+                        name="patientName">
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Username</mat-label>
+                    <input type="text" matInput placeholder="Ex. Mohammad" [(ngModel)]="data.patientId"
+                        name="patientId">
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput placeholder="Ex. southtech@hotmail.com" [(ngModel)]="data.email"
+                        name="email">
+                </mat-form-field>
+            </div>
+
+
+
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Report Delivery Date</mat-label>
+                    <input matInput [matDatepicker]="datepicker" [min]="minDate" [(ngModel)]="ProcessDate"
+                        name="ProcessDate" readonly>
+                    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #datepicker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Payment</mat-label>
+                    <input type="number" min="1" matInput placeholder="Ex. 1000" [(ngModel)]="data.pay" name="pay">
+                </mat-form-field>
+            </div>
+            <div class="col-md-4" align="end">
+                <button type="submit" mat-raised-button>Entry</button>
+            </div>
+        </div>
+    </form> </mat-card>
+    <br>
+
+    <!-- Search Test -->
+    <div class="row text-center">
+        <div class="col-md-6">
+            <mat-card>
+                <H2> Medical Test Details</H2>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Select a Test</mat-label>
+                    <mat-select [(ngModel)]="selectedTest" name="selectedTest" (ngModelChange)="getTestInfo()">
+                        <mat-option *ngFor="let test of testList" [value]="test.testId">{{test.testName}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-list>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><strong>Time :</strong>{{test.time}}</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><strong>Cost :</strong>{{test.cost}}</mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item><strong>Test Prerequisite : </strong>{{test.prerequisite}}</mat-list-item>
+                    <mat-divider></mat-divider>
+                </mat-list><br>
+                <button *ngIf="selectedTest!=0" mat-raised-button (click)="add()">Add</button>
+
+            </mat-card>
+        </div>
+        <div class="col-md-6">
+            <mat-card>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Test </th>
+                            <th scope="col">Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let test of selectedTestList; index as i">
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ test.testName }}</td>
+                            <td>{{ test.cost }}</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+                <mat-divider></mat-divider>
+                <mat-list-item><strong>Total Test Cost : </strong>{{data.totalCost}}</mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-card>
+        </div>
+    </div>
+
+
+
+</div>

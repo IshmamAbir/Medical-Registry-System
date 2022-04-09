@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <br>
+    <div class="col text-center">
+        <img class="responsive" src="../../../assets/doctorserial.png" alt="Registration Here">
+    </div>
+    <br>
+    <mat-card>
+
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>All Patient Serial</mat-card-title>
+            <mat-card-subtitle>{{ date }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Patient</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let serial of serialList; index as i">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>{{ serial.patientName }}</td>
+                        <td>{{ serial.age }}</td>
+                        <td>{{ serial.gender }}</td>
+                        <td>{{ serial.mobile }}</td>
+                        <td>{{ serial.id }}</td>
+                        <td>
+                            <button mat-icon-button color="primary" *ngIf="serial.id!='no'" [routerLink]="['/doctor/all/'+serial.id]" routerLinkActive="router-link-active" >
+                                <mat-icon>description</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions>
+
+            <div class="row">
+                <div class="col-md-4 offset-4">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Search By Date</mat-label>
+                        <input matInput [matDatepicker]="datepicker" [(ngModel)]="ProcessDate" name="ProcessDate"
+                            (ngModelChange)="searchByDate()" readonly>
+                        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                        <mat-datepicker touchUi #datepicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+        </mat-card-actions>
+
+    </mat-card>
+
+</div>
